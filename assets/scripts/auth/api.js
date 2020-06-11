@@ -1,10 +1,11 @@
 'use strict'
 
 const store = require('./../store')
+const config = require('./../config')
 
 const addUser = function (formData) {
   return $.ajax({
-    url: 'https://tic-tac-toe-wdi.herokuapp.com/sign-up',
+    url: config.apiUrl + '/sign-up',
     method: 'POST',
     data: {
       credentials: {
@@ -18,7 +19,7 @@ const addUser = function (formData) {
 
 const signUserIn = function (formData) {
   return $.ajax({
-    url: 'https://tic-tac-toe-wdi.herokuapp.com/sign-in',
+    url: config.apiUrl + '/sign-in',
     method: 'POST',
     data: {
       credentials: {
@@ -34,7 +35,7 @@ const changePassword = function (formData) {
   console.log(store)
   return $.ajax({
     method: 'PATCH',
-    url: 'https://tic-tac-toe-wdi.herokuapp.com/change-password',
+    url: config.apiUrl + '/change-password',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
@@ -49,7 +50,7 @@ const changePassword = function (formData) {
 
 const signOut = function (formData) {
   return $.ajax({
-    url: 'https://tic-tac-toe-wdi.herokuapp.com/sign-out',
+    url: config.apiUrl + '/sign-out',
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token

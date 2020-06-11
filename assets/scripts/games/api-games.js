@@ -36,7 +36,7 @@ const gameShow = function (data) {
 
 const gameUpdate = function (data) {
   return $.ajax({
-    url: config.apiURL + '/games/:id',
+    url: config.apiUrl + '/games/:id',
     method: 'PATCH',
     header: {
       Authorization: 'Token token=' + store.user.token
