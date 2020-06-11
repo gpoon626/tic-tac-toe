@@ -12,6 +12,61 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Tic-Tac-Toe</h1>
+
+      <section id ="sign-in">
+        <form id="sign-in-form">
+          <input type="text" name="credentials[email]" placeholder="Username" required>
+          <input type="password" name="credentials[password]" placeholder="Password" required>
+          <button type="submit">Sign In</button>
+          <span id="signin-result"></span>
+        </form>
+      </section>
+
+    <section id="sign-up-message">
+      <p> Don't have an account? Sign up down below!</p>
+    </section>
+
+      <section id ="signup">
+        <form id="signup-form">
+          <input type="text" name="credentials[email]" placeholder="Username" required>
+          <input type="password" name="credentials[password]" placeholder="Password" required>
+          <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
+          <button type="submit">Sign Up</button>
+          <span id="signup-result"></span>
+        </form>
+     </section>
+
+      <section id ="change-password">
+        <form id="change-password-form">
+          <input type="password" name="passwords[old]" placeholder="Password" required>
+          <input type="password" name="passwords[new]" placeholder="New Password" required>
+          <button type="submit">Change Password</button>
+          <span id="change-password-result"></span>
+        </form>
+      <button id="sign-out" type="click">Sign Out</button>
+      <button id='play-game' type='click'>Play Game</button>
+      </section>
+
+     <p id="message"> </p>
+
+
+
+      <section id="game-board">
+
+           <div class="container">
+             <div class="row">
+               <div id="one" class="col-4 col-lg-4 box alt-color"></div>
+               <div id="two" class="col-4 col-lg-4 box alt-color"></div>
+               <div id="three" class="col-4 col-lg-4 box alt-color"></div>
+               <div id="four" class="col-4 col-lg-4 box alt-color"></div>
+               <div id="five" class="col-4 col-lg-4 box alt-color"></div>
+               <div id="six" class="col-4 col-lg-4 box alt-color"></div>
+               <div id="seven" class="col-4 col-lg-4 box alt-color"></div>
+               <div id="eight" class="col-4 col-lg-4 box alt-color"></div>
+               <div id="nine" class="col-4 col-lg-4 box alt-color"></div>
+             </div>
+           </div>
+      </section>
     </body>
 </html>

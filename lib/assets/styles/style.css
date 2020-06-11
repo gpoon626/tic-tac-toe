@@ -1,0 +1,11 @@
+*{
+  boxing-sizing: border-box
+}
+nav {
+  display: flex;
+}
+
+div {
+  border: 1px solid pink;
+  flex-grow: 1;
+}
