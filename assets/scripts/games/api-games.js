@@ -5,7 +5,7 @@ const config = require('./../config')
 
 const gameIndex = function (data) {
   return $.ajax({
-    url: 'https://tic-tac-toe-wdi.herokuapp.com/games',
+    url: config.apiUrl + '/games',
     method: 'GET',
     header: {
       Authorization: 'Token token=' + store.user.token
@@ -26,7 +26,7 @@ const gameCreate = function () {
 
 const gameShow = function (data) {
   return $.ajax({
-    url: 'https://tic-tac-toe-wdi.herokuapp.com/games/:id',
+    url: config.apiUrl + '/games/:id',
     method: 'GET',
     header: {
       Authorization: 'Token token=' + store.user.token
@@ -36,7 +36,7 @@ const gameShow = function (data) {
 
 const gameUpdate = function (data) {
   return $.ajax({
-    url: 'https://tic-tac-toe-wdi.herokuapp.com/games/:id',
+    url: config.apiURL + '/games/:id',
     method: 'PATCH',
     header: {
       Authorization: 'Token token=' + store.user.token
