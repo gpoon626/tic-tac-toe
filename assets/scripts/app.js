@@ -8,8 +8,6 @@
 
 // your JS code goes here
 const userAction = require('./auth/events')
-
-const boxClick = require('./games/events-games')
 const gameAction = require('./games/events-games')
 
 $(() => {
@@ -23,13 +21,13 @@ $(() => {
 
   $('#play-game').on('click', gameAction.onGameCreate)
 
-  $('#one').on('click', boxClick.onBoxClick)
-  $('#two').on('click', boxClick.onBoxClick)
-  $('#three').on('click', boxClick.onBoxClick)
-  $('#four').on('click', boxClick.onBoxClick)
-  $('#five').on('click', boxClick.onBoxClick)
-  $('#six').on('click', boxClick.onBoxClick)
-  $('#seven').on('click', boxClick.onBoxClick)
-  $('#eight').on('click', boxClick.onBoxClick)
-  $('#nine').on('click', boxClick.onBoxClick)
+  $('#zero').on('click', gameAction.onGameUpdate)
+  $('#one').on('click', gameAction.onGameUpdate)
+  $('#two').on('click', gameAction.onGameUpdate)
+  $('#three').on('click', gameAction.onGameUpdate)
+  $('#four').on('click', gameAction.onGameUpdate)
+  $('#five').on('click', gameAction.onGameUpdate)
+  $('#six').on('click', gameAction.onGameUpdate)
+  $('#seven').on('click', gameAction.onGameUpdate)
+  $('#eight').on('click', gameAction.onGameUpdate)
 })

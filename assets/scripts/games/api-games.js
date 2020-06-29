@@ -7,20 +7,21 @@ const gameIndex = function (data) {
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'GET',
-    header: {
+    headers: {
       Authorization: 'Token token=' + store.user.token
     }
   })
 }
 
-const gameCreate = function () {
-  console.log(store)
+const gameCreate = function (data) {
+  // console.log(store)
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    }
+    },
+    data: {}
   })
 }
 
@@ -28,27 +29,28 @@ const gameShow = function (data) {
   return $.ajax({
     url: config.apiUrl + '/games/:id',
     method: 'GET',
-    header: {
+    headers: {
       Authorization: 'Token token=' + store.user.token
     }
   })
 }
 
-const gameUpdate = function (data) {
+const gameUpdate = function () {
+  console.log(store.value)
   return $.ajax({
-    url: config.apiUrl + '/games/:id',
+    url: config.apiUrl + '/games/' + store.game._id,
     method: 'PATCH',
-    header: {
+    headers: {
       Authorization: 'Token token=' + store.user.token
     },
     data: {
       game: {
         cell: {
-          index: 0,
-          value: 'x'
+          index: store.index,
+          value: store.value
         }
       },
-      over: false
+      over: store.over
     }
   })
 }
